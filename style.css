@@ -1,0 +1,40 @@
+/* Flexbox for jobs */
+.jobs {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.job {
+width: 28%;
+margin-bottom: 40px;
+padding: 20px;
+background-color: #FFFFFF;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+margin-top: 0;
+}
+
+.job ul {
+margin-left: 20px;
+margin-bottom: 10px;
+text-align: justify;
+}
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+.section {
+flex-direction: column;
+align-items: center;
+}
+
+.job {
+width: 100%;
+}
+}
