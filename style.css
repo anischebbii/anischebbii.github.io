@@ -1,18 +1,22 @@
-/* Flexbox for jobs */
-.jobs {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-}
+.wrapper {
+    margin: 20px;
+  }
+  
 
 .job {
-width: 28%;
-margin-bottom: 40px;
-padding: 20px;
-background-color: #FFFFFF;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #a7b2e2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ .section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #eada9b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .job h3 {
@@ -24,8 +28,6 @@ margin-left: 20px;
 margin-bottom: 10px;
 text-align: justify;
 }
-
-
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
