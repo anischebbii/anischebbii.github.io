@@ -1,40 +1,28 @@
 body {
-	font-family: sans-serif;
-	background-color: #e0e0e0;
-}
-
-h1 {
+	font-family: Arial, sans-serif;
 	text-align: center;
-	color: #333;
-}
-
-#game-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  }
+  
+  h1 {
+	margin-top: 20px;
+  }
+  
+  #game-container {
 	margin-top: 50px;
-}
-
-.game-btn {
-	font-size: 18px;
-	padding: 10px 20px;
-	margin: 0 10px;
-	background-color: #fff;
-	color: #333;
-	border: 2px solid #333;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 0.2s ease-in-out;
-}
-
-.game-btn:hover {
-	background-color: #333;
-	color: #fff;
-}
-
-.result-msg {
+  }
+  
+  button {
+	background-color: #e7e7e7;
+	border: 2px solid #555555;
+	color: #555555;
 	font-size: 24px;
-	font-weight: bold;
-	margin-top: 30px;
-	text-align: center;
-}
+	padding: 10px 20px;
+	margin: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+  
+  button:hover {
+	background-color: #555555;
+	color: #ffffff;
+  }
