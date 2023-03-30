@@ -37,7 +37,7 @@ function resetGame() {
 }
 
 function playGame(playerSelection) {
-    if (roundCount >= maxRounds || playerScore > 2) {
+    if (roundCount >= maxRounds) {
         return;
     }
 
@@ -61,10 +61,10 @@ function playGame(playerSelection) {
     }
 
     // Display the result
-    resultMsg.textContent = `You chose ${playerSelection}, computer chose ${computerSelection}. ${result}`;
+    resultMsg.textContent = `Round ${roundCount+1}: You chose ${playerSelection}, computer chose ${computerSelection}. ${result}`;
     roundCount++;
 
-    if (roundCount >= maxRounds || playerScore > 2) { // 2 out of 3 player wins or maxRounds=3 end the game and display final score and the reset (play again) button
+    if (roundCount === maxRounds) { // 2 out of 3 player wins or maxRounds=3 end the game and display final score and the reset (play again) button
         displayFinalScore();
     }
 }
@@ -75,7 +75,15 @@ function computerPlay() {
 }
 
 function displayFinalScore() {
-    scoreMsg.textContent = `Final Score: ${playerName} ${playerScore} - Computer ${computerScore}`;
+    let winner;
+    if (playerScore > computerScore) {
+        winner = `${playerName} wins!`;
+    } else if (playerScore < computerScore) {
+        winner = "Computer wins!";
+    } else {
+        winner = "It's a tie!";
+    }
+    scoreMsg.textContent = `Final Score: ${playerName} ${playerScore} - Computer ${computerScore}. ${winner}`;
     newGameBtn.style.display = "block";
 }
 

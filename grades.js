@@ -13,6 +13,18 @@ navGrades.addEventListener("click", () => {
     gradesView.style.display = "block";
 });
 
+navGame.addEventListener("click", () => {
+    gameView.style.display = "block";
+    gameView.classList.add("fade-in");
+    gradesView.style.display = "none";
+});
+
+navGrades.addEventListener("click", () => {
+    gameView.style.display = "none";
+    gradesView.style.display = "block";
+    gradesView.classList.add("fade-in");
+});
+
 
 const submitGrades = document.getElementById("submit-grades");
 const gradesForm = document.getElementById("grades-form");
@@ -61,20 +73,33 @@ calculateGradeBtn.addEventListener("click", () => {
     const average = totalMarks / numSubjects;
     let grade;
 
-    if (average >= 90) {
-        grade = "A";
+    if (average >= 93) {
+        grade = 'A+';
+    } else if (average >= 90) {
+        grade = 'A';
+    } else if (average >= 87) {
+        grade = 'A-';
+    } else if (average >= 83) {
+        grade = 'B+';
     } else if (average >= 80) {
-        grade = "B";
+        grade = 'B';
+    } else if (average >= 77) {
+        grade = 'B-';
+    } else if (average >= 73) {
+        grade = 'C+';
     } else if (average >= 70) {
-        grade = "C";
+        grade = 'C';
+    } else if (average >= 67) {
+        grade = 'C-';
+    } else if (average >= 63) {
+        grade = 'D+';
     } else if (average >= 60) {
-        grade = "D";
-    } else if (average >= 50) {
-        grade = "E";
+        grade = 'D';
     } else {
-        grade = "F";
+        grade = 'F';
     }
 
-    gradeResult.textContent = `${playerName}, your grade is ${grade}.`;
-    gradeResult.style.display = "block";
+    let gradeResult = document.getElementById('grade-result');
+    gradeResult.textContent = `${playerName}, your average grade is ${average} (${grade}).`;//'${playerName},Your average grade is: ' + average.toFixed(2) + ' (' + grade + ')';
+    gradeResult.style.display = 'block';
 });
