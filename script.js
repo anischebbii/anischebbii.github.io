@@ -37,7 +37,7 @@ function resetGame() {
 }
 
 function playGame(playerSelection) {
-    if (roundCount >= maxRounds || playerScore > 0) {
+    if (roundCount >= maxRounds || playerScore > 2) {
         return;
     }
 
@@ -64,7 +64,7 @@ function playGame(playerSelection) {
     resultMsg.textContent = `You chose ${playerSelection}, computer chose ${computerSelection}. ${result}`;
     roundCount++;
 
-    if (roundCount >= maxRounds || playerScore > 0) {
+    if (roundCount >= maxRounds || playerScore > 2) { // 2 out of 3 player wins or maxRounds=3 end the game and display final score and the reset (play again) button
         displayFinalScore();
     }
 }
