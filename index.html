@@ -1,45 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Week 9 submission</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li id="nav-game">Rock Paper Scissors Game</li>
-            <li id="nav-grades">Students Grades</li>
-        </ul>
-    </nav>
-    <div id="game-view" class="view">
-        <h1>Rock Paper Scissors Game</h1>
-	<div id="game-container">
-		<div id="buttons">
-			<button id="rock-btn" class="game-btn">Rock</button>
-			<button id="paper-btn" class="game-btn">Paper</button>
-			<button id="scissors-btn" class="game-btn">Scissors</button>
-		</div>	
-	</div>
-    </div>
-    <div id="grades-view" class="view" style="display: none;">
-		<h1>Students Grades</h1>
-		<form id="grades-form">
-			<div class="input-container">
-				<label for="num-subjects">Number of subjects taken:</label>
-				<input type="number" id="num-subjects" min="1" required>
-			</div>
-			<div id="submit-button">
-				<button id="submit-grades" type="submit">Submit</button>
-			</div>	
-		</form>
-		<div id="subject-inputs"></div>
-			<div id="calculate-button">
-				<button id="calculate-grade" type="button" style="display: none;">Calculate Grade</button>
-			</div>
-		<p id="grade-result" style="display: none;"></p>
-	</div>
-    <script src="script.js"></script>
-    <script src="grades.js"></script>
+  <h1 class="text-center mb-4">Grocery List</h1>
+  <h2 class="text-center mb-4">Week 10 - Q6</h2>
+  <div id="app" class="container">
+    <!-- The grocery list form and list will be placed here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
